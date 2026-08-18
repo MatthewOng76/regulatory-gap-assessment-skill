@@ -88,6 +88,52 @@
       <p>Then later:</p>
       <div class="prompt">Using the instruction file, add <span class="insert">internal policy/standard document 3</span> to the existing analysis and perform the incremental cross-standard reassessment.</div>
     </section>
+    <section class="usage">
+      <div class="eyebrow">Implement it as a Skill.md file</div>
+      <h2>Keep the method in the file, not in the prompt.</h2>
+      <p>If you want to operationalise this beyond a single workbook session, package it as a <strong>Skill.md</strong> file with a small, predictable folder structure. The naming should be boring and explicit so both people and agents can find it quickly.</p>
+      <h3>Example file and folder structure</h3>
+      <div class="prompt">regulatory-gap-assessment/
+├─ Skill.md
+├─ templates/
+│  ├─ workbook-template.xlsx
+│  └─ summary-template.md
+├─ examples/
+│  ├─ prompt-start-new-analysis.txt
+│  └─ prompt-add-internal-standard.txt
+└─ docs/
+   └─ implementation-notes.md</div>
+      <h3>Naming convention</h3>
+      <ul>
+        <li><span class="insert">Skill.md</span> for the main instruction file</li>
+        <li>Use lowercase, hyphenated folder names for the skill package</li>
+        <li>Keep examples and templates in clearly named subfolders</li>
+        <li>Name prompts by purpose, not by version history</li>
+      </ul>
+      <h3>Example execution patterns</h3>
+      <p>You can execute the same method in several ways depending on the environment available to you:</p>
+      <div class="prompt">CLI example
+agent run ./regulatory-gap-assessment/Skill.md \
+  --workbook ./workbooks/current-analysis.xlsx \
+  --regulation "Regulation paper" \
+  --internal-doc "internal policy/standard document 1"</div>
+      <div class="prompt">API example
+POST /v1/skills/execute
+{
+  "skill": "regulatory-gap-assessment/Skill.md",
+  "workbook": "current-analysis.xlsx",
+  "inputs": {
+    "regulation": "Regulation paper",
+    "internal_documents": [
+      "internal policy/standard document 1",
+      "internal policy/standard document 2"
+    ]
+  }
+}</div>
+      <div class="prompt">Agent example
+Use Skill.md in regulatory-gap-assessment to continue the analysis in the open workbook. Preserve existing Requirement IDs, keep the regulatory decomposition unchanged, and incorporate internal policy/standard document 2 into the existing assessment.</div>
+      <p>The common pattern is the same: the <strong>Skill.md</strong> file holds the durable methodology, while the call only supplies the workbook context and the current source documents.</p>
+    </section>
     <footer>
       Public overview page for the Regulatory Gap Assessment Skill.
     </footer>
