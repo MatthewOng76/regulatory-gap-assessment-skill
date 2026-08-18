@@ -19,8 +19,8 @@ Publish the regulatory gap assessment skill as a public GitHub repo plus a publi
 - README created locally
 - Repo is published at `https://github.com/Musix76/regulatory-gap-assessment-skill`
 - Skill file renamed to `skill/regulatory-gap-assessment.md`
-- `docs/index.html` is now a concept-selection page for 3 homepage directions
-- Mockups created at `docs/mockups/concept-1-editorial.html`, `docs/mockups/concept-2-foundry.html`, and `docs/mockups/concept-3-workflow.html`
+- `docs/index.html` is now the polished live homepage based on Concept 1
+- Concept mockups remain at `docs/mockups/concept-1-editorial.html`, `docs/mockups/concept-2-foundry.html`, and `docs/mockups/concept-3-workflow.html`
 - GitHub Pages source is enabled as `main` + `/docs`
 - Expected public URL is `https://musix76.github.io/regulatory-gap-assessment-skill/`
 - First live check still returned `404` while the initial Pages build propagates

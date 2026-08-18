@@ -3,127 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Regulatory Gap Assessment Skill — Mockup Concepts</title>
-  <meta name="description" content="Three premium homepage concepts for the Regulatory Gap Assessment Skill.">
+  <title>Regulatory Gap Assessment Skill</title>
+  <meta name="description" content="A public skill for rigorous, Excel-native regulatory gap analysis with verbatim evidence, cumulative internal mapping, and append-only reassessment.">
   <style>
-    :root {
-      --bg: #07111f;
-      --panel: rgba(255,255,255,.06);
-      --panel-strong: rgba(255,255,255,.1);
-      --ink: #f4f7fb;
-      --muted: rgba(244,247,251,.7);
-      --line: rgba(255,255,255,.12);
-      --blue: #8cb8ff;
-      --gold: #d9b57a;
-      --teal: #7fe0d0;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(70,120,255,.22), transparent 28%),
-        radial-gradient(circle at 90% 20%, rgba(0,200,180,.16), transparent 26%),
-        linear-gradient(180deg, #091321 0%, var(--bg) 100%);
-      color: var(--ink);
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 36px 20px 72px; }
-    .hero, .card {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      backdrop-filter: blur(16px);
-      border-radius: 28px;
-      box-shadow: 0 30px 80px rgba(0,0,0,.3);
-    }
-    .hero { padding: 42px; }
-    .eyebrow {
-      display: inline-flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 999px;
-      background: rgba(140,184,255,.14); color: var(--blue); font-weight: 700; font-size: 13px;
-      border: 1px solid rgba(140,184,255,.18);
-    }
-    h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); line-height: .98; margin: 18px 0 16px; max-width: 980px; }
-    .sub { max-width: 820px; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
-    .meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
-    .meta span { padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
-    .card { padding: 24px; display: flex; flex-direction: column; min-height: 360px; }
-    .kicker { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    .card h2 { margin: 12px 0 10px; font-size: 1.5rem; }
-    .card p { color: var(--muted); line-height: 1.65; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 18px; }
-    .chips span { font-size: 12px; color: var(--ink); padding: 8px 10px; border-radius: 999px; background: var(--panel-strong); border: 1px solid var(--line); }
-    .preview {
-      margin-top: auto; padding: 18px; border-radius: 20px; border: 1px solid var(--line); min-height: 120px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      color: #dbe8ff;
-    }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; padding: 13px 16px; border-radius: 14px;
-      font-weight: 700; border: 1px solid var(--line);
-    }
-    .btn.primary { background: #f4f7fb; color: #08111e; }
-    .btn.secondary { color: var(--ink); }
-    .foot { margin-top: 24px; color: var(--muted); font-size: 14px; }
-    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } .hero { padding: 28px; } }
+    :root{--bg:#f3f0ea;--ink:#171717;--muted:#5f5c56;--line:#d8d1c6;--panel:#fcfaf6;--accent:#84663f;--soft:#efe8dd}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 72px}
+    .top{display:flex;justify-content:space-between;gap:16px;align-items:center;color:var(--muted);font:600 13px/1.2 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+    .hero{padding:64px 0 38px;border-bottom:1px solid var(--line)}
+    h1{font-size:clamp(3.1rem,8vw,7rem);line-height:.92;max-width:920px;margin:0 0 20px}
+    .sub{max-width:760px;font:400 1.15rem/1.8 Inter,system-ui,sans-serif;color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;padding:13px 16px;border:1px solid var(--line);border-radius:999px;font:700 14px/1 Inter,system-ui,sans-serif;color:var(--ink)}.btn.fill{background:#171717;color:#fff;border-color:#171717}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 0}.stat{padding:18px 0 0;border-top:1px solid var(--line)}.stat strong{display:block;font-size:2rem}.stat span{font:500 14px/1.5 Inter,system-ui,sans-serif;color:var(--muted)}
+    .sections{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:34px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:30px}.eyebrow{font:700 12px/1 Inter,system-ui,sans-serif;color:var(--accent);text-transform:uppercase;letter-spacing:.1em}
+    h2{font-size:2rem;margin:12px 0 14px}.panel p,.panel li{font:400 1rem/1.75 Inter,system-ui,sans-serif;color:var(--muted)} ul{margin:0;padding-left:18px}.quote{font-size:1.45rem;line-height:1.45;color:var(--ink);margin:0 0 14px}
+    .band{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:24px;background:var(--soft);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .band div strong{display:block;font:700 14px/1.2 Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.band div span{font:400 15px/1.65 Inter,system-ui,sans-serif;color:var(--muted)}
+    footer{margin-top:26px;color:var(--muted);font:500 14px/1.6 Inter,system-ui,sans-serif}
+    @media (max-width:900px){.stats,.sections,.band{grid-template-columns:1fr}h1{font-size:3rem}.hero{padding-top:44px}}
   </style>
 </head>
 <body>
   <div class="wrap">
+    <div class="top"><span>Regulatory Gap Assessment Skill</span><a href="https://github.com/Musix76/regulatory-gap-assessment-skill">GitHub repository</a></div>
     <section class="hero">
-      <span class="eyebrow">Synapse Foundry treatment · concept selection</span>
-      <h1>Three premium webpage directions for the Regulatory Gap Assessment Skill.</h1>
-      <p class="sub">These are three distinct front-page mockups for the public site: one editorial and authority-led, one productized and trust-forward, and one structured around evidence and workflow. Pick the one you want, and I’ll refine that direction into the final public homepage.</p>
-      <div class="meta">
-        <span>Goal: explain what the skill does</span>
-        <span>Tone: premium, credible, model-agnostic</span>
-        <span>Output: select one concept to finish</span>
+      <h1>Regulatory gap analysis, treated like a method — not a loose prompt.</h1>
+      <p class="sub">A public skill for line-by-line regulatory assessment in Excel, built to preserve verbatim regulatory text, cumulative internal evidence, append-only reassessment history, and outputs that remain usable for review, filtering, and pivot analysis.</p>
+      <div class="cta">
+        <a class="btn fill" href="../skill/regulatory-gap-assessment.md">Read the skill</a>
+        <a class="btn" href="https://github.com/Musix76/regulatory-gap-assessment-skill">View repository</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>Verbatim first</strong><span>Quotations before interpretation</span></div>
+        <div class="stat"><strong>Excel-native</strong><span>Designed for filters, pivots, and handoff</span></div>
+        <div class="stat"><strong>Model-agnostic</strong><span>Method outside the inference layer</span></div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <div class="kicker">Concept 1</div>
-        <h2>Editorial Authority</h2>
-        <p>A sharper, more restrained Foundry-style landing page with large type, premium spacing, and an authority-led message. Best if you want the skill to feel like a serious methodology artifact.</p>
-        <div class="chips">
-          <span>Editorial minimal</span><span>Trust-first</span><span>High clarity</span>
-        </div>
-        <div class="preview">“For every regulatory requirement, what exactly is required, what internal evidence exists, and what must change?”</div>
-        <div class="actions">
-          <a class="btn primary" href="mockups/concept-1-editorial.html">Open concept 1</a>
-        </div>
+    <section class="sections">
+      <article class="panel">
+        <div class="eyebrow">What it does</div>
+        <h2>Turns regulatory assessment into a repeatable evidence workflow.</h2>
+        <p>The skill processes regulations sequentially, splits compound passages into atomic requirements, preserves the exact wording that matters, and then tests internal policy evidence against each requirement without guessing from topical similarity.</p>
+        <ul>
+          <li>Every claimed match requires verbatim internal evidence</li>
+          <li>Multiple internal standards can collectively satisfy one requirement</li>
+          <li>New evidence can strengthen, weaken, contradict, or overturn earlier conclusions</li>
+          <li>Reassessment history is preserved instead of overwritten</li>
+        </ul>
       </article>
-
-      <article class="card">
-        <div class="kicker">Concept 2</div>
-        <h2>Foundry Product Surface</h2>
-        <p>A more productized Synapse Foundry direction with glass panels, strong feature proof, and a clearer model-agnostic systems angle. Best if you want it to feel like an intelligent public product page.</p>
-        <div class="chips">
-          <span>SaaS clarity</span><span>Premium UI</span><span>Model-agnostic wedge</span>
-        </div>
-        <div class="preview">“Change the model if you want. Keep the method, evidence discipline, and output structure intact.”</div>
-        <div class="actions">
-          <a class="btn primary" href="mockups/concept-2-foundry.html">Open concept 2</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="kicker">Concept 3</div>
-        <h2>Evidence Workflow Narrative</h2>
-        <p>A more distinctive narrative page built around the actual workflow: regulation, evidence, assessment, reassessment. Best if you want the page to teach the method visually.</p>
-        <div class="chips">
-          <span>Storytelling</span><span>Process-led</span><span>Excel-native framing</span>
-        </div>
-        <div class="preview">“Structured enough for auditability. Flexible enough for cumulative evidence across many internal standards.”</div>
-        <div class="actions">
-          <a class="btn primary" href="mockups/concept-3-workflow.html">Open concept 3</a>
-        </div>
-      </article>
+      <aside class="panel">
+        <div class="eyebrow">Why it matters</div>
+        <p class="quote">Change the model if you want. Keep the machine: method, evidence discipline, structure, and output logic.</p>
+        <p>This skill is meant for teams who need a more defensible way to assess regulations against internal standards — especially where exact wording, cumulative evidence, and auditability matter more than fast summaries.</p>
+      </aside>
     </section>
 
-    <p class="foot">Current live repo: <a href="https://github.com/Musix76/regulatory-gap-assessment-skill">Musix76/regulatory-gap-assessment-skill</a> · Skill file: <a href="../skill/regulatory-gap-assessment.md">regulatory-gap-assessment.md</a></p>
+    <section class="band">
+      <div><strong>Audience</strong><span>Risk, compliance, governance, controls, and internal standards teams.</span></div>
+      <div><strong>Use case</strong><span>Map regulatory requirements against internal policy evidence without collapsing everything into one opaque narrative cell.</span></div>
+      <div><strong>Output shape</strong><span>One row per requirement × version × internal evidence source, with repeated conclusions where Excel usability needs them.</span></div>
+    </section>
+
+    <footer>
+      Public skill file: <a href="../skill/regulatory-gap-assessment.md">regulatory-gap-assessment.md</a>
+    </footer>
   </div>
 </body>
 </html>
