@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept 2 — Foundry Product Surface</title>
+  <style>
+    :root{--bg:#07111f;--ink:#f5f8ff;--muted:rgba(245,248,255,.72);--line:rgba(255,255,255,.12);--panel:rgba(255,255,255,.06);--blue:#8ab4ff;--teal:#78dfcf}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 0 0, rgba(70,120,255,.24), transparent 26%),radial-gradient(circle at 100% 0, rgba(0,214,176,.18), transparent 24%),linear-gradient(180deg,#07111f,#081524 60%,#07111f)}
+    .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 72px}.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--muted);font-size:14px}.hero,.panel{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(18px);border-radius:30px;box-shadow:0 28px 80px rgba(0,0,0,.32)}
+    .hero{padding:36px;margin-top:18px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(138,180,255,.12);border:1px solid rgba(138,180,255,.22);color:var(--blue);font-weight:700;font-size:13px} h1{font-size:clamp(2.8rem,6vw,5.6rem);line-height:.96;max-width:900px;margin:16px 0} .sub{max-width:760px;font-size:1.08rem;line-height:1.75;color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:14px 18px;border-radius:14px;border:1px solid var(--line);font-weight:700;text-decoration:none;color:inherit}.btn.fill{background:#f5f8ff;color:#08111f;border-color:#f5f8ff}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}.panel{padding:24px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}.mini{padding:18px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .mini strong{display:block;font-size:1.1rem;margin-bottom:8px}.mini p,.panel p,.panel li{color:var(--muted);line-height:1.65}.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.k{padding:18px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--line)} .k b{display:block;font-size:1.6rem}
+    ul{margin:0;padding-left:18px} @media (max-width:960px){.grid,.cards,.kpi{grid-template-columns:1fr}h1{font-size:3rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><span>Concept 2 · Foundry Product Surface</span><a href="../index.html" style="color:inherit">Back to concept selection</a></div>
+    <section class="hero">
+      <span class="eyebrow">Model-agnostic regulatory workflow</span>
+      <h1>Built like a system. Used like a skill.</h1>
+      <p class="sub">A premium public surface for the Regulatory Gap Assessment Skill — explaining how the method preserves evidence discipline, works inside Excel, and stays stable even when the model layer changes.</p>
+      <div class="cta">
+        <a class="btn fill" href="../../skill/regulatory-gap-assessment.md">Open skill file</a>
+        <a class="btn" href="https://github.com/Musix76/regulatory-gap-assessment-skill">GitHub repository</a>
+      </div>
+      <div class="kpi">
+        <div class="k"><b>2 tabs</b><span>Summary + Detailed Analysis</span></div>
+        <div class="k"><b>Append-only</b><span>Reassessment history stays intact</span></div>
+        <div class="k"><b>Many-to-one</b><span>Multiple internal sources per requirement</span></div>
+      </div>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>What the skill does</h2>
+        <div class="cards">
+          <div class="mini"><strong>Preserve source truth</strong><p>Verbatim regulatory wording is captured before interpretation, so the analysis does not drift into vague summaries.</p></div>
+          <div class="mini"><strong>Test internal evidence properly</strong><p>Internal matches require exact wording and can accumulate across many policies and standards.</p></div>
+          <div class="mini"><strong>Stay usable in Excel</strong><p>Repeated rows are intentional so the workbook remains sortable, filterable, and pivot-friendly.</p></div>
+          <div class="mini"><strong>Keep the capability portable</strong><p>The method lives outside the model, so the same workflow can run on frontier or private inference.</p></div>
+        </div>
+      </article>
+      <aside class="panel">
+        <h2>Why this page style</h2>
+        <ul>
+          <li>Feels closest to a Synapse Foundry product surface</li>
+          <li>Balances polish with trust and clarity</li>
+          <li>Makes the model-agnostic point explicit without sounding abstract</li>
+          <li>Best if you want a page that feels public, modern, and ownable</li>
+        </ul>
+      </aside>
+    </section>
+  </div>
+</body>
+</html>

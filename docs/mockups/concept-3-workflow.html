@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept 3 — Evidence Workflow Narrative</title>
+  <style>
+    :root{--bg:#0a0d12;--ink:#f5f4ef;--muted:rgba(245,244,239,.7);--line:rgba(245,244,239,.12);--amber:#f1c27a;--green:#79d7b2;--panel:#11161d}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0a0d12,#121922);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 72px}.top{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:var(--muted)}
+    .hero{padding:28px 0 22px} h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.96;max-width:880px;margin:0 0 16px}.sub{max-width:760px;color:var(--muted);font-size:1.08rem;line-height:1.72}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-flex;padding:13px 16px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid var(--line);color:inherit}.btn.fill{background:var(--ink);color:#0a0d12;border-color:var(--ink)}
+    .timeline{display:grid;gap:18px;margin-top:28px}.step{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start;padding:22px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.03)}
+    .num{font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)} .content h2{margin:0 0 8px;font-size:1.6rem}.content p{margin:0;color:var(--muted);line-height:1.72}
+    .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.tile{padding:18px;border-radius:22px;background:var(--panel);border:1px solid var(--line)} .tile strong{display:block;margin-bottom:8px} .tile span{color:var(--muted);line-height:1.6}
+    @media (max-width:900px){.step,.rail{grid-template-columns:1fr}h1{font-size:3rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><span>Concept 3 · Evidence Workflow Narrative</span><a href="../index.html" style="color:inherit">Back to concept selection</a></div>
+    <section class="hero">
+      <h1>From regulatory text to internal gap — one evidence trail at a time.</h1>
+      <p class="sub">This concept explains the skill through its actual workflow: capture the regulatory requirement, gather internal evidence, assess the fit, preserve the version, and keep reassessment additive. It is more narrative and method-teaching than the other two concepts.</p>
+      <div class="cta">
+        <a class="btn fill" href="../../skill/regulatory-gap-assessment.md">Read the skill</a>
+        <a class="btn" href="https://github.com/Musix76/regulatory-gap-assessment-skill">View repository</a>
+      </div>
+    </section>
+    <section class="timeline">
+      <div class="step"><div class="num">Step 01</div><div class="content"><h2>Capture the requirement</h2><p>Preserve verbatim regulatory text before interpretation. Split compound passages into atomic requirements that can actually be tested.</p></div></div>
+      <div class="step"><div class="num">Step 02</div><div class="content"><h2>Find internal evidence</h2><p>Assess the organisation’s policies, standards, and linked documents for exact support. Neighbouring references become dependencies to investigate, not automatic proof.</p></div></div>
+      <div class="step"><div class="num">Step 03</div><div class="content"><h2>Record the conclusion</h2><p>One requirement may be supported by many internal sources. The structure is intentionally repeated so the workbook remains useful in real Excel review, filtering, and pivots.</p></div></div>
+      <div class="step"><div class="num">Step 04</div><div class="content"><h2>Reassess without overwriting history</h2><p>New evidence can change the conclusion. The method keeps prior rows and versions intact so the reasoning path remains auditable.</p></div></div>
+    </section>
+    <section class="rail">
+      <div class="tile"><strong>Excel-native</strong><span>Built for analysts who actually need to sort, filter, compare versions, and hand work off.</span></div>
+      <div class="tile"><strong>Evidence-first</strong><span>Exact wording matters more than vibes, summaries, or loose topical resemblance.</span></div>
+      <div class="tile"><strong>Model-agnostic</strong><span>The workflow survives model changes because the core method lives outside the inference layer.</span></div>
+      <div class="tile"><strong>Audit-ready</strong><span>Append-only reassessment makes the analysis more explainable and easier to defend.</span></div>
+    </section>
+  </div>
+</body>
+</html>
