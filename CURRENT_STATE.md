@@ -17,5 +17,7 @@ Publish the regulatory gap assessment skill as a public GitHub repo plus a publi
 - Source skill file copied locally from Telegram attachment
 - Public landing page created locally
 - README created locally
-- Publish to GitHub not yet proven
-- Need `Musix76` account publication access to make the repo public under that account
+- Repo is published at `https://github.com/Musix76/regulatory-gap-assessment-skill`
+- Skill file renamed to `skill/regulatory-gap-assessment.md`
+- GitHub Pages landing page file remains `docs/index.html`
+- GitHub Pages itself is not yet proven live

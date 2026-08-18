@@ -21,7 +21,7 @@ That means the same capability can work with frontier models, private deployment
 
 ## Contents
 
-- `skill/RegulatoryGapAnalysis_Simple_v5.md` — the skill/spec file
+- `skill/regulatory-gap-assessment.md` — the skill/spec file
 - `docs/index.html` — public landing page for the skill
 
 ## Public page
