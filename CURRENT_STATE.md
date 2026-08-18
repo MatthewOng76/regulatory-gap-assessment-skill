@@ -6,7 +6,7 @@ Status: ACTIVE
 ## Project
 - Repo: `regulatory-gap-assessment-skill`
 - Path: `/Users/matthewong/Documents/X-Projects/regulatory-gap-assessment-skill`
-- Intended GitHub account: `Musix76`
+- Intended GitHub account: `MatthewOng76`
 - Intended branch: `main`
 - Intended publish target: GitHub Pages
 
@@ -17,7 +17,7 @@ Publish the regulatory gap assessment skill as a public GitHub repo plus a publi
 - Source skill file copied locally from Telegram attachment
 - Public landing page created locally
 - README created locally
-- Repo is published at `https://github.com/Musix76/regulatory-gap-assessment-skill`
+- Repo is published at `https://github.com/MatthewOng76/regulatory-gap-assessment-skill`
 - Skill file renamed to `skill/regulatory-gap-assessment.md`
 - `docs/index.html` is now the polished live homepage based on Concept 1
 - Concept mockups remain at `docs/mockups/concept-1-editorial.html`, `docs/mockups/concept-2-foundry.html`, and `docs/mockups/concept-3-workflow.html`
