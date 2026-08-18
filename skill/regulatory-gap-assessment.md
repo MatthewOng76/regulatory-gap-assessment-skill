@@ -1,4 +1,4 @@
-# RegulatoryGapAnalysis_Simple_v5.md
+# regulatory-gap-assessment.md
 
 **Schema Version: 5.0 --- First-Principles Edition**
 
