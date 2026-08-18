@@ -78,7 +78,7 @@
 
       <h3>Starting a new analysis</h3>
       <p>Open the workbook you want Co-pilot to populate, then use:</p>
-      <div class="prompt">Use the instruction file to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the <span class="insert">Regulation paper</span> and <span class="insert">internal policy/standard document 1</span> if you do not already have them. Continue through the full analysis and validation.</div>
+      <div class="prompt">Use <span class="insert">regulatory-gap-assessment.md</span> to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the <span class="insert">Regulation paper</span> and <span class="insert">internal policy/standard document 1</span> if you do not already have them. Continue through the full analysis and validation.</div>
       <p>Co-pilot should then ask for the first source documents. For example:</p>
       <ul>
         <li><span class="insert">Regulation paper</span></li>
@@ -88,11 +88,11 @@
 
       <h3>Adding another internal standard later</h3>
       <p>When another internal policy or standard becomes available, use it to reassess and extend the existing analysis rather than starting again from scratch:</p>
-      <div class="prompt">Using the instruction file, incorporate <span class="insert">internal policy/standard document 2</span> into the existing analysis in this workbook. Do not restart the analysis or recreate the regulatory requirements. Preserve all existing Requirement IDs and verbatim regulatory quotations. Identify which existing requirements this additional standard could materially affect, add its verbatim internal evidence, and reassess those requirements holistically together with all previously reviewed internal standards. Update both Detailed_Analysis and Summary, including any changed gaps, collective coverage, internal inconsistencies and recommendations.</div>
+      <div class="prompt">Using <span class="insert">regulatory-gap-assessment.md</span>, incorporate <span class="insert">internal policy/standard document 2</span> into the existing analysis in this workbook. Do not restart the analysis or recreate the regulatory requirements. Preserve all existing Requirement IDs and verbatim regulatory quotations. Identify which existing requirements this additional standard could materially affect, add its verbatim internal evidence, and reassess those requirements holistically together with all previously reviewed internal standards. Update both Detailed_Analysis and Summary, including any changed gaps, collective coverage, internal inconsistencies and recommendations.</div>
       <p>Once Co-pilot follows the Markdown reliably, the prompt can be shortened:</p>
-      <div class="prompt">Using the instruction file, add <span class="insert">internal policy/standard document 2</span> to the existing analysis and perform the incremental cross-standard reassessment. Preserve the existing regulatory decomposition and Requirement IDs.</div>
+      <div class="prompt">Using <span class="insert">regulatory-gap-assessment.md</span>, add <span class="insert">internal policy/standard document 2</span> to the existing analysis and perform the incremental cross-standard reassessment. Preserve the existing regulatory decomposition and Requirement IDs.</div>
       <p>Then later:</p>
-      <div class="prompt">Using the instruction file, add <span class="insert">internal policy/standard document 3</span> to the existing analysis and perform the incremental cross-standard reassessment.</div>
+      <div class="prompt">Using <span class="insert">regulatory-gap-assessment.md</span>, add <span class="insert">internal policy/standard document 3</span> to the existing analysis and perform the incremental cross-standard reassessment.</div>
     </section>
 
     <section class="usage">
