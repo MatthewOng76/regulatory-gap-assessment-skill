@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regulatory Gap Assessment Skill</title>
+  <meta name="description" content="A reusable, model-agnostic skill for rigorous regulatory gap analysis in Excel.">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #10213d;
+      --muted: #52627d;
+      --accent: #173d8f;
+      --accent-2: #74512d;
+      --border: #dbe3f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 72px; }
+    .hero, .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 24px; box-shadow: 0 18px 50px rgba(16,33,61,.08); }
+    .hero { padding: 44px; }
+    .eyebrow {
+      display: inline-block; padding: 8px 12px; border-radius: 999px; background: #eaf0ff; color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .02em;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.02; margin: 18px 0 18px; }
+    .sub { font-size: 1.1rem; color: var(--muted); max-width: 760px; }
+    .cta { display:flex; gap:12px; flex-wrap:wrap; margin-top: 26px; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; padding: 14px 18px; border-radius: 14px; text-decoration:none; font-weight:700; border:1px solid var(--border);
+    }
+    .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+    .btn.secondary { background: white; color: var(--ink); }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+    .panel { padding: 24px; }
+    .panel h3 { margin: 0 0 10px; font-size: 1.1rem; }
+    .muted { color: var(--muted); }
+    .section { margin-top: 24px; }
+    .section-head { margin: 0 0 14px; }
+    .pill { display:inline-block; padding: 6px 10px; border-radius:999px; background:#fff6ec; color:var(--accent-2); font-weight:700; font-size:12px; }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 8px 0; }
+    .two { display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; margin-top: 24px; }
+    code.inline { background:#f0f4fb; padding:2px 6px; border-radius:6px; }
+    footer { margin-top: 28px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 900px) { .grid, .two { grid-template-columns: 1fr; } .hero { padding: 28px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Model-agnostic skill</span>
+      <h1>Regulatory Gap Assessment Skill</h1>
+      <p class="sub">A reusable workflow for line-by-line, section-by-section regulatory gap analysis in Excel — designed to preserve verbatim evidence, cumulative multi-document assessment, append-only reassessment history, and audit-friendly outputs.</p>
+      <div class="cta">
+        <a class="btn primary" href="../skill/RegulatoryGapAnalysis_Simple_v5.md">View skill file</a>
+        <a class="btn secondary" href="https://github.com/Musix76/regulatory-gap-assessment-skill">View repository</a>
+      </div>
+    </section>
+
+    <div class="grid section">
+      <article class="panel">
+        <span class="pill">What it solves</span>
+        <h3>Regulatory analysis that stays rigorous</h3>
+        <p class="muted">The skill forces verbatim regulatory evidence, verbatim internal evidence, controlled assessments, and explicit rationale instead of topical similarity or guessed compliance.</p>
+      </article>
+      <article class="panel">
+        <span class="pill">Why Excel-native matters</span>
+        <h3>Built for sorting, filters, and pivots</h3>
+        <p class="muted">Repeated rows are intentional. The design supports cumulative evidence across many internal policies and standards while remaining workable in a real Excel analysis workflow.</p>
+      </article>
+      <article class="panel">
+        <span class="pill">Why model-agnostic matters</span>
+        <h3>Change the capsule. Keep the machine.</h3>
+        <p class="muted">The model provides inference. The methodology, structure, context, and guardrails sit outside it — so the capability can move across frontier or local/private models.</p>
+      </article>
+    </div>
+
+    <div class="two section">
+      <section class="panel">
+        <h2 class="section-head">How the skill works</h2>
+        <ul>
+          <li>Processes regulations sequentially, section by section</li>
+          <li>Splits compound wording into atomic requirements</li>
+          <li>Preserves verbatim regulatory wording before interpretation</li>
+          <li>Assesses internal evidence iteratively and cumulatively</li>
+          <li>Maintains append-only reassessment history</li>
+          <li>Keeps the workbook limited to <code class="inline">Summary</code> and <code class="inline">Detailed_Analysis</code></li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2 class="section-head">Designed for real-world internal frameworks</h2>
+        <ul>
+          <li>One regulatory requirement may require 10–20 internal documents</li>
+          <li>Multiple internal standards may collectively satisfy one requirement</li>
+          <li>Internal consistency is tracked separately from regulatory compliance</li>
+          <li>Neighbouring standards are dependencies to investigate, not automatic gaps</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="panel section">
+      <h2 class="section-head">What this is a practical example of</h2>
+      <p class="muted">This skill is a concrete example of building capability outside the model layer. The workflow can use a frontier model when capability matters most, or a capable local/private model when privacy, deployment control, or data sensitivity matter more. The method does not need to change just because the inference layer changes.</p>
+    </section>
+
+    <footer>
+      Public page for the Regulatory Gap Assessment Skill. Repository intended for <strong>Musix76/regulatory-gap-assessment-skill</strong>.
+    </footer>
+  </div>
+</body>
+</html>
