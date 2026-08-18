@@ -36,6 +36,7 @@
       <p class="sub">A public skill for line-by-line regulatory assessment in Excel, designed to preserve verbatim regulatory text, cumulative internal evidence, append-only reassessment history, and outputs that remain usable for review, filtering, and pivot analysis.</p>
       <div class="cta">
         <a class="btn fill" href="#how-to-use-it">How to use it</a>
+        <a class="btn" href="https://raw.githubusercontent.com/Musix76/regulatory-gap-assessment-skill/main/skill/regulatory-gap-assessment.md">Open Skill.md</a>
         <a class="btn" href="https://github.com/Musix76/regulatory-gap-assessment-skill">View repository</a>
       </div>
       <div class="stats">
@@ -70,7 +71,7 @@
     <section class="usage" id="how-to-use-it">
       <div class="eyebrow">How to use it</div>
       <h2>Two simple prompts are enough.</h2>
-      <p>This example is intentionally framed around <strong>Microsoft Co-pilot in an organisation, working inside an already-open Excel workbook</strong>, because many teams may not have premium access to more advanced internal AI agent setups. The instruction file should carry the methodology, so you should not need to restate it in detail to Co-pilot. Make the open Excel workbook, the Markdown instruction file, and the relevant source documents available to Co-pilot, then use one prompt to start the analysis and one prompt whenever you add another internal standard.</p>
+      <p>This example is intentionally framed around <strong>Microsoft Co-pilot in an organisation, working inside an already-open Excel workbook</strong>, because many teams may not have premium access to more advanced internal AI agent setups. The instruction file should carry the methodology, so you should not need to restate it in detail to Co-pilot. Have Co-pilot work with the open Excel workbook, the Markdown instruction file, and the relevant source documents in the same active context, then use one prompt to start the analysis and one prompt whenever you add another internal standard.</p>
       <h3>Starting a new analysis</h3>
       <p>Open the workbook you want Co-pilot to populate, then use:</p>
       <div class="prompt">Use the instruction file to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the <span class="insert">Regulation paper</span> and <span class="insert">internal policy/standard document 1</span> if you do not already have them. Continue through the full analysis and validation.</div>
