@@ -21,6 +21,8 @@
     h2{font-size:2rem;margin:12px 0 14px}.panel p,.panel li{font:400 1rem/1.75 Inter,system-ui,sans-serif;color:var(--muted)} ul{margin:0;padding-left:18px}.quote{font-size:1.45rem;line-height:1.45;color:var(--ink);margin:0 0 14px}
     .band{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:24px;background:var(--soft);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .band div strong{display:block;font:700 14px/1.2 Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.band div span{font:400 15px/1.65 Inter,system-ui,sans-serif;color:var(--muted)}
+    .usage{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:30px}.usage h3{font-size:1.35rem;margin:0 0 10px}.usage p,.usage li{font:400 1rem/1.75 Inter,system-ui,sans-serif;color:var(--muted)}
+    .prompt{margin-top:14px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:#f7f3ed;font:500 14px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:#403b35;white-space:pre-wrap}
     footer{margin-top:26px;color:var(--muted);font:500 14px/1.6 Inter,system-ui,sans-serif}
     @media (max-width:900px){.stats,.sections,.band{grid-template-columns:1fr}h1{font-size:3rem}.hero{padding-top:44px}}
   </style>
@@ -32,7 +34,7 @@
       <h1>A reusable skill for structured regulatory gap analysis.</h1>
       <p class="sub">A public skill for line-by-line regulatory assessment in Excel, designed to preserve verbatim regulatory text, cumulative internal evidence, append-only reassessment history, and outputs that remain usable for review, filtering, and pivot analysis.</p>
       <div class="cta">
-        <a class="btn fill" href="../skill/regulatory-gap-assessment.md">Read the skill</a>
+        <a class="btn fill" href="#how-to-use-it">How to use it</a>
         <a class="btn" href="https://github.com/Musix76/regulatory-gap-assessment-skill">View repository</a>
       </div>
       <div class="stats">
@@ -67,8 +69,32 @@
       <div><strong>Output shape</strong><span>One row per requirement × version × internal evidence source, with repeated conclusions where Excel usability needs them.</span></div>
     </section>
 
+    <section class="usage" id="how-to-use-it">
+      <div class="eyebrow">How to use it</div>
+      <h2>Two simple prompts are enough.</h2>
+      <p>The instruction file should carry the methodology, so you should not need to restate it in detail to Copilot. Make the Excel workbook, the Markdown instruction file, and the relevant source documents available to Copilot, then use one prompt to start the analysis and one prompt whenever you add another internal standard.</p>
+
+      <h3>Starting a new analysis</h3>
+      <p>Open the workbook you want Copilot to populate, then use:</p>
+      <div class="prompt">Use RegulatoryGapAnalysis_Simple_v2.md to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the regulatory document and internal policy/standard locations if you do not already have them. Continue through the full analysis and validation.</div>
+      <p>Copilot should then ask for the regulatory document and the initial internal standard. For example:</p>
+      <ul>
+        <li>Regulatory document: MAS BCM Guidelines June 2022.pdf</li>
+        <li>Internal standard: Business Continuity Management Standard.pdf</li>
+      </ul>
+      <p>It should produce just <strong>Summary</strong> and <strong>Detailed_Analysis</strong>, with the regulatory side atomically decomposed and the internal standard mapped against it.</p>
+
+      <h3>Adding another internal standard later</h3>
+      <p>Do not ask it to perform another gap analysis. Ask it to extend the existing one:</p>
+      <div class="prompt">Using RegulatoryGapAnalysis_Simple_v2.md, incorporate Crisis Management Standard.pdf into the existing analysis in this workbook. Do not restart the analysis or recreate the regulatory requirements. Preserve all existing Requirement IDs and verbatim regulatory quotations. Identify which existing requirements this additional standard could materially affect, add its verbatim internal evidence, and reassess those requirements holistically together with all previously reviewed internal standards. Update both Detailed_Analysis and Summary, including any changed gaps, collective coverage, internal inconsistencies and recommendations.</div>
+      <p>Once Copilot follows the Markdown reliably, the prompt can be shortened:</p>
+      <div class="prompt">Using RegulatoryGapAnalysis_Simple_v2.md, add Crisis Management Standard.pdf to the existing analysis and perform the incremental cross-standard reassessment. Preserve the existing regulatory decomposition and Requirement IDs.</div>
+      <p>Then later:</p>
+      <div class="prompt">Using RegulatoryGapAnalysis_Simple_v2.md, add Technology Resilience Standard.pdf to the existing analysis and perform the incremental cross-standard reassessment.</div>
+    </section>
+
     <footer>
-      Public skill file: <a href="../skill/regulatory-gap-assessment.md">regulatory-gap-assessment.md</a>
+      Public overview page for the Regulatory Gap Assessment Skill.
     </footer>
   </div>
 </body>
