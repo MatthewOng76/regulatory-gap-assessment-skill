@@ -23,6 +23,7 @@
     .band div strong{display:block;font:700 14px/1.2 Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.band div span{font:400 15px/1.65 Inter,system-ui,sans-serif;color:var(--muted)}
     .usage{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:30px}.usage h3{font-size:1.35rem;margin:0 0 10px}.usage p,.usage li{font:400 1rem/1.75 Inter,system-ui,sans-serif;color:var(--muted)}
     .prompt{margin-top:14px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:#f7f3ed;font:500 14px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:#403b35;white-space:pre-wrap}
+    .insert{color:#2b67c8;font-weight:700}
     footer{margin-top:26px;color:var(--muted);font:500 14px/1.6 Inter,system-ui,sans-serif}
     @media (max-width:900px){.stats,.sections,.band{grid-template-columns:1fr}h1{font-size:3rem}.hero{padding-top:44px}}
   </style>
@@ -76,21 +77,21 @@
 
       <h3>Starting a new analysis</h3>
       <p>Open the workbook you want Copilot to populate, then use:</p>
-      <div class="prompt">Use regulatory-gap-assessment.md to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the regulatory document and internal policy/standard locations if you do not already have them. Continue through the full analysis and validation.</div>
-      <p>Copilot should then ask for the regulatory document and the initial internal standard. For example:</p>
+      <div class="prompt">Use the instruction file to perform a complete regulatory gap analysis in this open workbook. Follow the instructions in the file exactly. Ask me for the <span class="insert">Regulation paper</span> and <span class="insert">internal policy/standard document 1</span> if you do not already have them. Continue through the full analysis and validation.</div>
+      <p>Copilot should then ask for the first source documents. For example:</p>
       <ul>
-        <li>Regulatory document: MAS BCM Guidelines June 2022.pdf</li>
-        <li>Internal standard: Business Continuity Management Standard.pdf</li>
+        <li><span class="insert">Regulation paper</span></li>
+        <li><span class="insert">Internal policy/standard document 1</span></li>
       </ul>
-      <p>It should produce just <strong>Summary</strong> and <strong>Detailed_Analysis</strong>, with the regulatory side atomically decomposed and the internal standard mapped against it.</p>
+      <p>It should produce just <strong>Summary</strong> and <strong>Detailed_Analysis</strong>, with the regulatory side atomically decomposed and the first internal standard mapped against it.</p>
 
       <h3>Adding another internal standard later</h3>
       <p>Do not ask it to perform another gap analysis. Ask it to extend the existing one:</p>
-      <div class="prompt">Using regulatory-gap-assessment.md, incorporate Crisis Management Standard.pdf into the existing analysis in this workbook. Do not restart the analysis or recreate the regulatory requirements. Preserve all existing Requirement IDs and verbatim regulatory quotations. Identify which existing requirements this additional standard could materially affect, add its verbatim internal evidence, and reassess those requirements holistically together with all previously reviewed internal standards. Update both Detailed_Analysis and Summary, including any changed gaps, collective coverage, internal inconsistencies and recommendations.</div>
+      <div class="prompt">Using the instruction file, incorporate <span class="insert">internal policy/standard document 2</span> into the existing analysis in this workbook. Do not restart the analysis or recreate the regulatory requirements. Preserve all existing Requirement IDs and verbatim regulatory quotations. Identify which existing requirements this additional standard could materially affect, add its verbatim internal evidence, and reassess those requirements holistically together with all previously reviewed internal standards. Update both Detailed_Analysis and Summary, including any changed gaps, collective coverage, internal inconsistencies and recommendations.</div>
       <p>Once Copilot follows the Markdown reliably, the prompt can be shortened:</p>
-      <div class="prompt">Using regulatory-gap-assessment.md, add Crisis Management Standard.pdf to the existing analysis and perform the incremental cross-standard reassessment. Preserve the existing regulatory decomposition and Requirement IDs.</div>
+      <div class="prompt">Using the instruction file, add <span class="insert">internal policy/standard document 2</span> to the existing analysis and perform the incremental cross-standard reassessment. Preserve the existing regulatory decomposition and Requirement IDs.</div>
       <p>Then later:</p>
-      <div class="prompt">Using regulatory-gap-assessment.md, add Technology Resilience Standard.pdf to the existing analysis and perform the incremental cross-standard reassessment.</div>
+      <div class="prompt">Using the instruction file, add <span class="insert">internal policy/standard document 3</span> to the existing analysis and perform the incremental cross-standard reassessment.</div>
     </section>
 
     <footer>
