@@ -22,5 +22,6 @@ Publish the regulatory gap assessment skill as a public GitHub repo plus a publi
 - `docs/index.html` is now the polished live homepage based on Concept 1
 - Concept mockups remain at `docs/mockups/concept-1-editorial.html`, `docs/mockups/concept-2-foundry.html`, and `docs/mockups/concept-3-workflow.html`
 - GitHub Pages source is enabled as `main` + `/docs`
+- Google Analytics tag `G-5Y3C0BTT4Y` is now added to `docs/index.html` for homepage visit tracking
 - Expected public URL is `https://musix76.github.io/regulatory-gap-assessment-skill/`
 - First live check still returned `404` while the initial Pages build propagates
