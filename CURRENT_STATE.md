@@ -37,9 +37,11 @@ Additional active workstream:
 - Live GitHub Pages verification after push passed:
   - homepage no longer contains `Phone download help`
   - homepage HTML now contains `navigator.share({ files: [file]` in the original `Download Skill.zip` button flow
-  - homepage HTML now contains the `Save to Files` instruction text
+- Current copy adjustment locally:
+  - removed the extra phone-specific instruction text below the CTA
+  - kept the single original `Download Skill.zip` button behavior unchanged
 - Proof boundary:
   - ZIP validity was already proven live
   - previous fallback designs still allowed raw ZIP preview on iPhone Safari
-  - the new single-button share-first behavior is now live on GitHub Pages
-  - actual iPhone Save-to-Files behavior is still not yet re-proven from the device in this loop
+  - the new single-button share-first behavior remains the live intended fix
+  - actual iPhone Save-to-Files behavior worked for the user, but this loop only re-patches/removes copy and does not add new behavioral proof beyond the user confirmation
