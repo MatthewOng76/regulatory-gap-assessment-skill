@@ -31,17 +31,19 @@ Additional active workstream:
 - Live verification of the deployed Pages HTML should confirm the GA tag is present before treating analytics as active
 - `docs/index.html` now has a phone-friendlier ZIP CTA design locally:
   - JS-driven `Download Skill.zip` button that fetches the ZIP as a blob and triggers a download anchor
-  - direct fallback link `Direct ZIP file`
-  - explicit mobile instruction text telling users to tap and hold the direct link if their browser still previews the ZIP
+  - phone-specific helper link `Phone download help`
+  - explicit mobile instruction text pointing users to the helper page if the browser still previews the ZIP
+- new helper page locally:
+  - `docs/downloads/download-skill.html`
+  - includes `Save Skill ZIP` button
+  - attempts `navigator.share({ files: [...] })` on supported mobile browsers so users can choose `Save to Files`
+  - keeps a last-resort raw ZIP link only below the helper flow
 - Local verification passed for the new mobile-download markup:
-  - `onclick="downloadSkillZip(event)"` present
-  - direct fallback link with `id="direct-zip-link"` present
-  - mobile fallback instruction text present
-- Live GitHub Pages verification after push passed:
-  - homepage HTML now contains `downloadSkillZip(event)`
-  - homepage HTML now contains `direct-zip-link`
-  - homepage HTML now contains the mobile fallback instruction text
+  - homepage helper link present
+  - helper page contains `Save Skill ZIP`
+  - helper page contains `navigator.share`
+  - helper page contains last-resort raw ZIP fallback
 - Proof boundary:
   - ZIP validity was already proven live
-  - live homepage now serves the new mobile-friendly CTA/fallback markup
-  - actual iPhone browser behavior is still more likely to download, but not yet re-proven from the device in this loop
+  - previous direct fallback was still previewing raw ZIP bytes on iPhone Safari
+  - the new helper-page fallback is patched locally but not yet re-proven live on the phone in this loop
