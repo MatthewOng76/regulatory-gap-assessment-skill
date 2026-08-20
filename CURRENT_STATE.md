@@ -43,7 +43,15 @@ Additional active workstream:
   - helper page contains `Save Skill ZIP`
   - helper page contains `navigator.share`
   - helper page contains last-resort raw ZIP fallback
+- Live GitHub Pages verification after push passed:
+  - homepage HTML now contains `Phone download help`
+  - homepage HTML now links to `downloads/download-skill.html`
+  - helper page `downloads/download-skill.html` is live
+  - helper page HTML now contains `Save Skill ZIP`
+  - helper page HTML now contains `navigator.share`
+  - helper page HTML now contains `Last-resort raw ZIP link`
 - Proof boundary:
   - ZIP validity was already proven live
   - previous direct fallback was still previewing raw ZIP bytes on iPhone Safari
-  - the new helper-page fallback is patched locally but not yet re-proven live on the phone in this loop
+  - the new helper-page fallback is now live on GitHub Pages
+  - actual iPhone Save-to-Files behavior is still not yet re-proven from the device in this loop
