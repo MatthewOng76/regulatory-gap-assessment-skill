@@ -37,7 +37,11 @@ Additional active workstream:
   - `onclick="downloadSkillZip(event)"` present
   - direct fallback link with `id="direct-zip-link"` present
   - mobile fallback instruction text present
+- Live GitHub Pages verification after push passed:
+  - homepage HTML now contains `downloadSkillZip(event)`
+  - homepage HTML now contains `direct-zip-link`
+  - homepage HTML now contains the mobile fallback instruction text
 - Proof boundary:
   - ZIP validity was already proven live
-  - this new mobile-friendly CTA is patched locally
-  - live GitHub Pages verification after push is still required before claiming the phone UX is fixed
+  - live homepage now serves the new mobile-friendly CTA/fallback markup
+  - actual iPhone browser behavior is still more likely to download, but not yet re-proven from the device in this loop
