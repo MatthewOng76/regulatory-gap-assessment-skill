@@ -34,7 +34,12 @@ Additional active workstream:
   - on supported phones, the click now tries `navigator.share({ files: [...] })` first so iPhone users can choose `Save to Files`
   - only if that is unavailable does it fall back to the blob download anchor path
   - extra helper CTA removed from the homepage so the original download button remains the primary action
+- Live GitHub Pages verification after push passed:
+  - homepage no longer contains `Phone download help`
+  - homepage HTML now contains `navigator.share({ files: [file]` in the original `Download Skill.zip` button flow
+  - homepage HTML now contains the `Save to Files` instruction text
 - Proof boundary:
   - ZIP validity was already proven live
   - previous fallback designs still allowed raw ZIP preview on iPhone Safari
-  - the new single-button share-first behavior is patched locally but not yet re-proven live on the phone in this loop
+  - the new single-button share-first behavior is now live on GitHub Pages
+  - actual iPhone Save-to-Files behavior is still not yet re-proven from the device in this loop
