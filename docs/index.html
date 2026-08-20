@@ -40,7 +40,6 @@
       event.preventDefault();
       const button = event.currentTarget;
       const url = button.getAttribute('data-download-url');
-      const fallbackLink = document.getElementById('direct-zip-link');
       if (!url) return;
       const originalLabel = button.textContent;
       button.disabled = true;
@@ -49,26 +48,29 @@
         const response = await fetch(url, { cache: 'no-store' });
         if (!response.ok) throw new Error('Download failed');
         const blob = await response.blob();
-        const objectUrl = URL.createObjectURL(blob);
-        const anchor = document.createElement('a');
-        anchor.href = objectUrl;
-        anchor.download = 'regulatory-gap-assessment-skill.zip';
-        document.body.appendChild(anchor);
-        anchor.click();
-        anchor.remove();
-        URL.revokeObjectURL(objectUrl);
-        button.textContent = 'Download started';
+        const file = new File([blob], 'regulatory-gap-assessment-skill.zip', { type: blob.type || 'application/zip' });
+
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file], title: 'Regulatory Gap Assessment Skill ZIP' });
+          button.textContent = 'Save to Files opened';
+        } else {
+          const objectUrl = URL.createObjectURL(blob);
+          const anchor = document.createElement('a');
+          anchor.href = objectUrl;
+          anchor.download = 'regulatory-gap-assessment-skill.zip';
+          document.body.appendChild(anchor);
+          anchor.click();
+          anchor.remove();
+          URL.revokeObjectURL(objectUrl);
+          button.textContent = 'Download started';
+        }
+      } catch (error) {
+        button.textContent = 'Download failed';
+      } finally {
         window.setTimeout(() => {
           button.disabled = false;
           button.textContent = originalLabel;
-        }, 1600);
-      } catch (error) {
-        button.disabled = false;
-        button.textContent = 'Use direct ZIP link';
-        if (fallbackLink) {
-          fallbackLink.focus();
-          fallbackLink.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        }
+        }, 2200);
       }
     }
   </script>
@@ -82,10 +84,9 @@
       <div class="cta">
         <a class="btn fill" href="#how-to-use-it">How to use it</a>
         <button class="btn" type="button" data-download-url="downloads/regulatory-gap-assessment-skill.zip" onclick="downloadSkillZip(event)">Download Skill.zip</button>
-        <a class="btn" id="direct-zip-link" href="downloads/download-skill.html">Phone download help</a>
         <a class="btn" href="https://github.com/MatthewOng76/regulatory-gap-assessment-skill">View repository</a>
       </div>
-      <div class="download-note">On phone, tap <strong>Download Skill.zip</strong> first. If your browser still previews the file, tap <strong>Phone download help</strong> and use <strong>Save Skill ZIP</strong> to open the iPhone share/save flow instead of the raw ZIP page.</div>
+      <div class="download-note">On phone, tapping <strong>Download Skill.zip</strong> should try the iPhone share/save flow first so you can choose <strong>Save to Files</strong>.</div>
       <div class="stats">
         <div class="stat"><strong>Verbatim first</strong><span>Quotations before interpretation</span></div>
         <div class="stat"><strong>Excel-native</strong><span>Designed for filters, pivots, and handoff</span></div>

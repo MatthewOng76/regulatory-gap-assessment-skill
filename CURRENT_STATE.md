@@ -29,29 +29,12 @@ Additional active workstream:
 - Public repo push with the analytics commit `63bffc8` is complete on `main`
 - Expected public URL is `https://MatthewOng76.github.io/regulatory-gap-assessment-skill/`
 - Live verification of the deployed Pages HTML should confirm the GA tag is present before treating analytics as active
-- `docs/index.html` now has a phone-friendlier ZIP CTA design locally:
-  - JS-driven `Download Skill.zip` button that fetches the ZIP as a blob and triggers a download anchor
-  - phone-specific helper link `Phone download help`
-  - explicit mobile instruction text pointing users to the helper page if the browser still previews the ZIP
-- new helper page locally:
-  - `docs/downloads/download-skill.html`
-  - includes `Save Skill ZIP` button
-  - attempts `navigator.share({ files: [...] })` on supported mobile browsers so users can choose `Save to Files`
-  - keeps a last-resort raw ZIP link only below the helper flow
-- Local verification passed for the new mobile-download markup:
-  - homepage helper link present
-  - helper page contains `Save Skill ZIP`
-  - helper page contains `navigator.share`
-  - helper page contains last-resort raw ZIP fallback
-- Live GitHub Pages verification after push passed:
-  - homepage HTML now contains `Phone download help`
-  - homepage HTML now links to `downloads/download-skill.html`
-  - helper page `downloads/download-skill.html` is live
-  - helper page HTML now contains `Save Skill ZIP`
-  - helper page HTML now contains `navigator.share`
-  - helper page HTML now contains `Last-resort raw ZIP link`
+- `docs/index.html` now has a single-button phone-friendlier ZIP CTA design locally:
+  - JS-driven `Download Skill.zip` button fetches the ZIP as a blob
+  - on supported phones, the click now tries `navigator.share({ files: [...] })` first so iPhone users can choose `Save to Files`
+  - only if that is unavailable does it fall back to the blob download anchor path
+  - extra helper CTA removed from the homepage so the original download button remains the primary action
 - Proof boundary:
   - ZIP validity was already proven live
-  - previous direct fallback was still previewing raw ZIP bytes on iPhone Safari
-  - the new helper-page fallback is now live on GitHub Pages
-  - actual iPhone Save-to-Files behavior is still not yet re-proven from the device in this loop
+  - previous fallback designs still allowed raw ZIP preview on iPhone Safari
+  - the new single-button share-first behavior is patched locally but not yet re-proven live on the phone in this loop
